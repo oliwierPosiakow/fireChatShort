@@ -1,9 +1,8 @@
-import '../css/App.css'
 import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "../firebase.js";
-import {useCollectionData} from "react-firebase-hooks/firestore";
 import SignUp from "./SignUp";
 import Chat from "./Chat";
+import '../css/App.css'
 
 function App() {
   const [user] = useAuthState(auth)
