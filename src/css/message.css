@@ -30,6 +30,7 @@
 }
 .received .message__text {
   background-color: #2a45a9;
+  text-align: left;
 }
 .received .message__name {
   text-align: left;
