@@ -2,6 +2,7 @@
 import {auth} from "../firebase";
 import '../css/message.css'
 
+// @ts-ignore
 export default function ChatMessage(props){
     const {name, text, uid} = props.msg
     const messageClass:string = uid === auth.currentUser.uid ? 'sent' : 'received'

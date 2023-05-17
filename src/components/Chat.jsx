@@ -1,4 +1,5 @@
 import SignOut from "./SignOut";
+// @ts-ignore
 import {auth, db} from '../firebase.js'
 import ChatMessage from "./ChatMessage";
 import {MdSend} from 'react-icons/md'
@@ -18,6 +19,7 @@ export default function Chat(){
     const [messages, setMessages] = useState([])
     const scroll = useRef()
 
+    // @ts-ignore
     useEffect(()=> {
         const q = query(collection(db,'messages'), orderBy('timestamp'))
         const unsubscribe = onSnapshot(q, (querySnap) => {
@@ -43,10 +45,13 @@ export default function Chat(){
                 timestamp: serverTimestamp()
             })
             setFormVal('')
+            // @ts-ignore
             scroll.current.scrollIntoView({behavior: 'smooth'})
         }
     }
 
+
+    // @ts-ignore
     return (
         <div className='main'>
             <header className='main__header'>
@@ -54,10 +59,12 @@ export default function Chat(){
             </header>
             <div className="main__messages">
                 { messages &&
-                    messages.map((msg, index) => {
+                    messages.map((msg) => {
+                        // @ts-ignore
                         return <ChatMessage key={msg.id} msg={msg}/>
                     })
                 }
+
                 <span ref={scroll}></span>
             </div>
             <form className='main__form' onSubmit={submitMessage}>

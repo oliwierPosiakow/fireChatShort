@@ -1,3 +1,4 @@
+// @ts-ignore
 import {auth} from "../firebase";
 export default function SignOut(){
     return auth.currentUser && (

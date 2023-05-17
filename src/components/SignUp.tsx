@@ -1,4 +1,5 @@
 import {GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
+// @ts-ignore
 import {auth} from '../firebase.js'
 import GoogleButton from "react-google-button";
 import '../css/signup.css'
