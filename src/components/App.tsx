@@ -2,12 +2,12 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {auth} from "../firebase.js";
 import SignUp from "./SignUp";
 import Chat from "./Chat";
-import '../css/App.css'
+import '../css/app.css'
 
 function App() {
   const [user] = useAuthState(auth)
   return (
-    <main>
+    <main className='main-container'>
       {user
           ? <Chat/>
           : <SignUp/>
@@ -15,5 +15,4 @@ function App() {
     </main>
   )
 }
-
 export default App

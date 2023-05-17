@@ -1,0 +1,104 @@
+.main {
+  width: 100vw;
+  max-width: 1000px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #374055;
+  position: relative;
+  padding-bottom: 1em;
+}
+.main__header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  background-image: url("../assets/giphy.gif");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main__header button {
+  border: none;
+  background-color: #374055;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  color: #f5f5f5;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px 3px rgba(3, 3, 3, 0.25);
+}
+.main__header button:hover {
+  animation-name: logout;
+  animation-duration: 1s;
+}
+.main__messages {
+  height: 100%;
+  padding: 0 1em;
+  overflow: hidden;
+  overflow: scroll;
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+.main__form {
+  height: 40px;
+  padding: 0 1em;
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+.main__form input {
+  width: 100%;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 7px;
+  padding: 0 0.5em;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.23);
+}
+.main__form button {
+  max-width: 100px;
+  width: 20%;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fe59a9;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+.main__form button svg {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+}
+.main__form button:hover svg {
+  color: #374055;
+}
+
+@keyframes logout {
+  0% {
+    transform: rotate(3deg);
+  }
+  25% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 8px 8px rgba(128, 128, 128, 0.66);
+    max-height: 800px;
+  }
+}
+
+/*# sourceMappingURL=chat.css.map */

@@ -1,0 +1,12 @@
+@media screen and (min-width: 1000px){
+  *{
+    font-size: 20px;
+  }
+  .main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+  }
+}
